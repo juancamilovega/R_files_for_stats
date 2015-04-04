@@ -159,11 +159,14 @@ Average_TP_for_C2B1=(P1C2B1[17]+P3C2B1[17]+P5C2B1[17]+P7C2B1[17]+P9C2B1[17]+P11C
 Average_TP_for_C1B2=(P2C1B2[17]+P4C1B2[17]+P6C1B2[17]+P8C1B2[17]+P10C1B2[17]+P12C1B2[17]+P14C1B2[17]+P16C1B2[17]+P18C1B2[17]+P20C1B2[17])/10
 Average_TP_for_C2B2=(P2C2B2[17]+P4C2B2[17]+P6C2B2[17]+P8C2B2[17]+P10C2B2[17]+P12C2B2[17]+P14C2B2[17]+P16C2B2[17]+P18C2B2[17]+P20C2B2[17])/10
 
-TP_T_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
-TP_T_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
-ER_T_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
-ER_T_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
-
+TP_Z_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
+TPconfidence_B1=pnorm(TP_Z_value_between_C1B1_and_C2B1, mean=0, sd=1, lower.tail=TRUE)
+TP_Z_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
+ER_Z_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
+ER_Z_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
+TPconfidence_B2=pnorm(TP_Z_value_between_C1B2_and_C2B2, mean=0, sd=1, lower.tail=TRUE)
+ERconfidence_B1=pnorm(ER_Z_value_between_C1B1_and_C2B1, mean=0, sd=1, lower.tail=TRUE)
+ERconfidence_B2=pnorm(ER_Z_value_between_C1B2_and_C2B2, mean=0, sd=1, lower.tail=TRUE)
 
 #Create an r object to contrain the linear regresion data
 LR_C1B1.r=lm(MT_C1B1b~ID_C1B1b)
@@ -243,7 +246,13 @@ mean_TP_C1B2
 mean_TP_C2B1
 mean_TP_C2B2
 
-TP_T_value_between_C1B1_and_C2B1
-TP_T_value_between_C1B2_and_C2B2
-ER_T_value_between_C1B1_and_C2B1
-ER_T_value_between_C1B2_and_C2B2
+TP_Z_value_between_C1B1_and_C2B1
+TP_Z_value_between_C1B2_and_C2B2
+ER_Z_value_between_C1B1_and_C2B1
+ER_Z_value_between_C1B2_and_C2B2
+
+print("The Confidence is the probability that the averages of the two are different")
+TPconfidence_B1
+TPconfidence_B2
+ERconfidence_B1
+ERconfidence_B2

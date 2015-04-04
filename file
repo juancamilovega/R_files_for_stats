@@ -1,0 +1,249 @@
+#read the files
+P1C1B1 <- read.table("c:/stats/FittsTaskTwo-P01-C01-B01.sd2", header=TRUE, sep=',')
+P1C2B1 <- read.table("c:/stats/FittsTaskTwo-P01-C02-B01.sd2", header=TRUE, sep=',')
+P2C1B2 <- read.table("c:/stats/FittsTaskTwo-P02-C01-B02.sd2", header=TRUE, sep=',')
+P2C2B2 <- read.table("c:/stats/FittsTaskTwo-P02-C02-B02.sd2", header=TRUE, sep=',')
+P3C1B1 <- read.table("c:/stats/FittsTaskTwo-P03-C01-B01.sd2", header=TRUE, sep=',')
+P3C2B1 <- read.table("c:/stats/FittsTaskTwo-P03-C02-B01.sd2", header=TRUE, sep=',')
+P4C1B2 <- read.table("c:/stats/FittsTaskTwo-P04-C01-B02.sd2", header=TRUE, sep=',')
+P4C2B2 <- read.table("c:/stats/FittsTaskTwo-P04-C02-B02.sd2", header=TRUE, sep=',')
+P5C1B1 <- read.table("c:/stats/FittsTaskTwo-P05-C01-B01.sd2", header=TRUE, sep=',')
+P5C2B1 <- read.table("c:/stats/FittsTaskTwo-P05-C02-B01.sd2", header=TRUE, sep=',')
+P6C1B2 <- read.table("c:/stats/FittsTaskTwo-P06-C01-B02.sd2", header=TRUE, sep=',')
+P6C2B2 <- read.table("c:/stats/FittsTaskTwo-P06-C02-B02.sd2", header=TRUE, sep=',')
+P7C1B1 <- read.table("c:/stats/FittsTaskTwo-P07-C01-B01.sd2", header=TRUE, sep=',')
+P7C2B1 <- read.table("c:/stats/FittsTaskTwo-P07-C02-B01.sd2", header=TRUE, sep=',')
+P8C1B2 <- read.table("c:/stats/FittsTaskTwo-P08-C01-B02.sd2", header=TRUE, sep=',')
+P8C2B2 <- read.table("c:/stats/FittsTaskTwo-P08-C02-B02.sd2", header=TRUE, sep=',')
+P9C1B1 <- read.table("c:/stats/FittsTaskTwo-P09-C01-B01.sd2", header=TRUE, sep=',')
+P9C2B1 <- read.table("c:/stats/FittsTaskTwo-P09-C02-B01.sd2", header=TRUE, sep=',')
+P10C1B2 <- read.table("c:/stats/FittsTaskTwo-P10-C01-B02.sd2", header=TRUE, sep=',')
+P10C2B2 <- read.table("c:/stats/FittsTaskTwo-P10-C02-B02.sd2", header=TRUE, sep=',')
+P11C1B1 <- read.table("c:/stats/FittsTaskTwo-P11-C01-B01.sd2", header=TRUE, sep=',')
+P11C2B1 <- read.table("c:/stats/FittsTaskTwo-P11-C02-B01.sd2", header=TRUE, sep=',')
+P12C1B2 <- read.table("c:/stats/FittsTaskTwo-P12-C01-B02.sd2", header=TRUE, sep=',')
+P12C2B2 <- read.table("c:/stats/FittsTaskTwo-P12-C02-B02.sd2", header=TRUE, sep=',')
+P13C1B1 <- read.table("c:/stats/FittsTaskTwo-P13-C01-B01.sd2", header=TRUE, sep=',')
+P13C2B1 <- read.table("c:/stats/FittsTaskTwo-P13-C02-B01.sd2", header=TRUE, sep=',')
+P14C1B2 <- read.table("c:/stats/FittsTaskTwo-P14-C01-B02.sd2", header=TRUE, sep=',')
+P14C2B2 <- read.table("c:/stats/FittsTaskTwo-P14-C02-B02.sd2", header=TRUE, sep=',')
+P15C1B1 <- read.table("c:/stats/FittsTaskTwo-P15-C01-B01.sd2", header=TRUE, sep=',')
+P15C2B1 <- read.table("c:/stats/FittsTaskTwo-P15-C02-B01.sd2", header=TRUE, sep=',')
+P16C1B2 <- read.table("c:/stats/FittsTaskTwo-P16-C01-B02.sd2", header=TRUE, sep=',')
+P16C2B2 <- read.table("c:/stats/FittsTaskTwo-P16-C02-B02.sd2", header=TRUE, sep=',')
+P17C1B1 <- read.table("c:/stats/FittsTaskTwo-P17-C01-B01.sd2", header=TRUE, sep=',')
+P17C2B1 <- read.table("c:/stats/FittsTaskTwo-P17-C02-B01.sd2", header=TRUE, sep=',')
+P18C1B2 <- read.table("c:/stats/FittsTaskTwo-P18-C01-B02.sd2", header=TRUE, sep=',')
+P18C2B2 <- read.table("c:/stats/FittsTaskTwo-P18-C02-B02.sd2", header=TRUE, sep=',')
+P19C1B1 <- read.table("c:/stats/FittsTaskTwo-P19-C01-B01.sd2", header=TRUE, sep=',')
+P19C2B1 <- read.table("c:/stats/FittsTaskTwo-P19-C02-B01.sd2", header=TRUE, sep=',')
+P20C1B2 <- read.table("c:/stats/FittsTaskTwo-P20-C01-B02.sd2", header=TRUE, sep=',')
+P20C2B2 <- read.table("c:/stats/FittsTaskTwo-P20-C02-B02.sd2", header=TRUE, sep=',')
+
+#Concatinate each category into matrix format from list format
+ID_C1B1=matrix(c(P1C1B1[9],P3C1B1[9],P5C1B1[9],P7C1B1[9],P9C1B1[9],P11C1B1[9],P13C1B1[9],P15C1B1[9],P17C1B1[9],P19C1B1[9]))
+ID_C2B1=matrix(c(P1C2B1[9],P3C2B1[9],P5C2B1[9],P7C2B1[9],P9C2B1[9],P11C2B1[9],P13C2B1[9],P15C2B1[9],P17C2B1[9],P19C2B1[9]))
+ID_C1B2=matrix(c(P2C1B2[9],P4C1B2[9],P6C1B2[9],P8C1B2[9],P10C1B2[9],P12C1B2[9],P14C1B2[9],P16C1B2[9],P18C1B2[9],P20C1B2[9]))
+ID_C2B2=matrix(c(P2C2B2[9],P4C2B2[9],P6C2B2[9],P8C2B2[9],P10C2B2[9],P12C2B2[9],P14C2B2[9],P16C2B2[9],P18C2B2[9],P20C2B2[9]))
+
+MT_C1B1=matrix(c(P1C1B1[15],P3C1B1[15],P5C1B1[15],P7C1B1[15],P9C1B1[15],P11C1B1[15],P13C1B1[15],P15C1B1[15],P17C1B1[15],P19C1B1[15]))
+MT_C2B1=matrix(c(P1C2B1[15],P3C2B1[15],P5C2B1[15],P7C2B1[15],P9C2B1[15],P11C2B1[15],P13C2B1[15],P15C2B1[15],P17C2B1[15],P19C2B1[15]))
+MT_C1B2=matrix(c(P2C1B2[15],P4C1B2[15],P6C1B2[15],P8C1B2[15],P10C1B2[15],P12C1B2[15],P14C1B2[15],P16C1B2[15],P18C1B2[15],P20C1B2[15]))
+MT_C2B2=matrix(c(P2C2B2[15],P4C2B2[15],P6C2B2[15],P8C2B2[15],P10C2B2[15],P12C2B2[15],P14C2B2[15],P16C2B2[15],P18C2B2[15],P20C2B2[15]))
+
+ER_C1B1=matrix(c(P1C1B1[16],P3C1B1[16],P5C1B1[16],P7C1B1[16],P9C1B1[16],P11C1B1[16],P13C1B1[16],P15C1B1[16],P17C1B1[16],P19C1B1[16]))
+ER_C2B1=matrix(c(P1C2B1[16],P3C2B1[16],P5C2B1[16],P7C2B1[16],P9C2B1[16],P11C2B1[16],P13C2B1[16],P15C2B1[16],P17C2B1[16],P19C2B1[16]))
+ER_C1B2=matrix(c(P2C1B2[16],P4C1B2[16],P6C1B2[16],P8C1B2[16],P10C1B2[16],P12C1B2[16],P14C1B2[16],P16C1B2[16],P18C1B2[16],P20C1B2[16]))
+ER_C2B2=matrix(c(P2C2B2[16],P4C2B2[16],P6C2B2[16],P8C2B2[16],P10C2B2[16],P12C2B2[16],P14C2B2[16],P16C2B2[16],P18C2B2[16],P20C2B2[16]))
+
+TP_C1B1=matrix(c(P1C1B1[17],P3C1B1[17],P5C1B1[17],P7C1B1[17],P9C1B1[17],P11C1B1[17],P13C1B1[17],P15C1B1[17],P17C1B1[17],P19C1B1[17]))
+TP_C2B1=matrix(c(P1C2B1[17],P3C2B1[17],P5C2B1[17],P7C2B1[17],P9C2B1[17],P11C2B1[17],P13C2B1[17],P15C2B1[17],P17C2B1[17],P19C2B1[17]))
+TP_C1B2=matrix(c(P2C1B2[17],P4C1B2[17],P6C1B2[17],P8C1B2[17],P10C1B2[17],P12C1B2[17],P14C1B2[17],P16C1B2[17],P18C1B2[17],P20C1B2[17]))
+TP_C2B2=matrix(c(P2C2B2[17],P4C2B2[17],P6C2B2[17],P8C2B2[17],P10C2B2[17],P12C2B2[17],P14C2B2[17],P16C2B2[17],P18C2B2[17],P20C2B2[17]))
+
+#Combine all columns into a single long row
+ID_C1B1b=c(ID_C1B1[[1]],ID_C1B1[[2]],ID_C1B1[[3]],ID_C1B1[[4]],ID_C1B1[[5]],ID_C1B1[[6]],ID_C1B1[[7]],ID_C1B1[[8]],ID_C1B1[[9]],ID_C1B1[[10]])
+ID_C1B2b=c(ID_C1B2[[1]],ID_C1B2[[2]],ID_C1B2[[3]],ID_C1B2[[4]],ID_C1B2[[5]],ID_C1B2[[6]],ID_C1B2[[7]],ID_C1B2[[8]],ID_C1B2[[9]],ID_C1B2[[10]])
+ID_C2B1b=c(ID_C2B1[[1]],ID_C2B1[[2]],ID_C2B1[[3]],ID_C2B1[[4]],ID_C2B1[[5]],ID_C2B1[[6]],ID_C2B1[[7]],ID_C2B1[[8]],ID_C2B1[[9]],ID_C2B1[[10]])
+ID_C2B2b=c(ID_C2B2[[1]],ID_C2B2[[2]],ID_C2B2[[3]],ID_C2B2[[4]],ID_C2B2[[5]],ID_C2B2[[6]],ID_C2B2[[7]],ID_C2B2[[8]],ID_C2B2[[9]],ID_C2B2[[10]])
+ID_SingleVector=c(ID_C1B1b,ID_C1B2b,ID_C2B1b,ID_C2B2b)
+ID_C1=c(ID_C1B1b,ID_C1B2b)
+ID_C2=c(ID_C2B1b,ID_C2B2b)
+ID=c(ID_C1,ID_C2)
+mean_ID_C1B1=mean(ID_C1B1b)
+mean_ID_C1B2=mean(ID_C1B2b)
+mean_ID_C2B1=mean(ID_C2B1b)
+mean_ID_C2B2=mean(ID_C2B2b)
+
+ER_C1B1b=c(ER_C1B1[[1]],ER_C1B1[[2]],ER_C1B1[[3]],ER_C1B1[[4]],ER_C1B1[[5]],ER_C1B1[[6]],ER_C1B1[[7]],ER_C1B1[[8]],ER_C1B1[[9]],ER_C1B1[[10]])
+ER_C2B1b=c(ER_C1B2[[1]],ER_C1B2[[2]],ER_C1B2[[3]],ER_C1B2[[4]],ER_C1B2[[5]],ER_C1B2[[6]],ER_C1B2[[7]],ER_C1B2[[8]],ER_C1B2[[9]],ER_C1B2[[10]])
+ER_C1B2b=c(ER_C2B1[[1]],ER_C2B1[[2]],ER_C2B1[[3]],ER_C2B1[[4]],ER_C2B1[[5]],ER_C2B1[[6]],ER_C2B1[[7]],ER_C2B1[[8]],ER_C2B1[[9]],ER_C2B1[[10]])
+ER_C2B2b=c(ER_C2B2[[1]],ER_C2B2[[2]],ER_C2B2[[3]],ER_C2B2[[4]],ER_C2B2[[5]],ER_C2B2[[6]],ER_C2B2[[7]],ER_C2B2[[8]],ER_C2B2[[9]],ER_C2B2[[10]])
+ER_SingleVector=c(ER_C1B1b,ER_C2B1b,ER_C1B2b,ER_C2B2b)
+ER_C1=c(ER_C1B1b,ER_C1B2b)
+ER_C2=c(ER_C2B1b,ER_C2B2b)
+mean_ER_C1B1=mean(ER_C1B1b)
+mean_ER_C1B2=mean(ER_C1B2b)
+mean_ER_C2B1=mean(ER_C2B1b)
+mean_ER_C2B2=mean(ER_C2B2b)
+
+MT_C1B1b=c(MT_C1B1[[1]],MT_C1B1[[2]],MT_C1B1[[3]],MT_C1B1[[4]],MT_C1B1[[5]],MT_C1B1[[6]],MT_C1B1[[7]],MT_C1B1[[8]],MT_C1B1[[9]],MT_C1B1[[10]])
+MT_C2B1b=c(MT_C1B2[[1]],MT_C1B2[[2]],MT_C1B2[[3]],MT_C1B2[[4]],MT_C1B2[[5]],MT_C1B2[[6]],MT_C1B2[[7]],MT_C1B2[[8]],MT_C1B2[[9]],MT_C1B2[[10]])
+MT_C1B2b=c(MT_C2B1[[1]],MT_C2B1[[2]],MT_C2B1[[3]],MT_C2B1[[4]],MT_C2B1[[5]],MT_C2B1[[6]],MT_C2B1[[7]],MT_C2B1[[8]],MT_C2B1[[9]],MT_C2B1[[10]])
+MT_C2B2b=c(MT_C2B2[[1]],MT_C2B2[[2]],MT_C2B2[[3]],MT_C2B2[[4]],MT_C2B2[[5]],MT_C2B2[[6]],MT_C2B2[[7]],MT_C2B2[[8]],MT_C2B2[[9]],MT_C2B2[[10]])
+MT_SingleVector=c(MT_C1B1b,MT_C2B1b,MT_C1B2b,MT_C2B2b)
+MT_C1=c(MT_C1B1b,MT_C1B2b)
+MT_C2=c(MT_C2B1b,MT_C2B2b)
+MT=c(MT_C1,MT_C2)
+mean_MT_C1B1=mean(MT_C1B1b)
+mean_MT_C1B2=mean(MT_C1B2b)
+mean_MT_C2B1=mean(MT_C2B1b)
+mean_MT_C2B2=mean(MT_C2B2b)
+
+TP_C1B1b=c(TP_C1B1[[1]],TP_C1B1[[2]],TP_C1B1[[3]],TP_C1B1[[4]],TP_C1B1[[5]],TP_C1B1[[6]],TP_C1B1[[7]],TP_C1B1[[8]],TP_C1B1[[9]],TP_C1B1[[10]])
+TP_C2B1b=c(TP_C1B2[[1]],TP_C1B2[[2]],TP_C1B2[[3]],TP_C1B2[[4]],TP_C1B2[[5]],TP_C1B2[[6]],TP_C1B2[[7]],TP_C1B2[[8]],TP_C1B2[[9]],TP_C1B2[[10]])
+TP_C1B2b=c(TP_C2B1[[1]],TP_C2B1[[2]],TP_C2B1[[3]],TP_C2B1[[4]],TP_C2B1[[5]],TP_C2B1[[6]],TP_C2B1[[7]],TP_C2B1[[8]],TP_C2B1[[9]],TP_C2B1[[10]])
+TP_C2B2b=c(TP_C2B2[[1]],TP_C2B2[[2]],TP_C2B2[[3]],TP_C2B2[[4]],TP_C2B2[[5]],TP_C2B2[[6]],TP_C2B2[[7]],TP_C2B2[[8]],TP_C2B2[[9]],TP_C2B2[[10]])
+TP_SingleVector=c(TP_C1B1b,TP_C2B1b,TP_C1B2b,TP_C2B2b)
+TP_C1=c(TP_C1B1b,TP_C1B2b)
+TP_C2=c(TP_C2B1b,TP_C2B2b)
+TP=c(TP_C1,TP_C2)
+mean_TP_C1B1=mean(TP_C1B1b)
+mean_TP_C1B2=mean(TP_C1B2b)
+mean_TP_C2B1=mean(TP_C2B1b)
+mean_TP_C2B2=mean(TP_C2B2b)
+
+#Compute the standard deviation on these vectors
+sd_ID_C1B1=sd(ID_C1B1b)
+sd_ID_C1B2=sd(ID_C1B2b)
+sd_ID_C2B1=sd(ID_C2B1b)
+sd_ID_C2B2=sd(ID_C2B2b)
+sd_ID=sd(ID_SingleVector)
+
+sd_ER_C1B1=sd(ER_C1B1b)
+sd_ER_C1B2=sd(ER_C2B1b)
+sd_ER_C2B1=sd(ER_C1B2b)
+sd_ER_C2B2=sd(ER_C2B2b)
+sd_ER=sd(ER_SingleVector)
+
+sd_MT_C1B2=sd(MT_C2B1b)
+sd_MT_C1B1=sd(MT_C1B1b)
+sd_MT_C2B1=sd(MT_C1B2b)
+sd_MT_C2B2=sd(MT_C2B2b)
+sd_MT=sd(MT_SingleVector)
+
+sd_TP_C1B2=sd(TP_C2B1b)
+sd_TP_C1B1=sd(TP_C1B1b)
+sd_TP_C2B1=sd(TP_C1B2b)
+sd_TP_C2B2=sd(TP_C2B2b)
+sd_TP=sd(TP_SingleVector)
+
+#Compute the averages in each category
+Average_ID_for_C1B1=(P1C1B1[9]+P3C1B1[9]+P5C1B1[9]+P7C1B1[9]+P9C1B1[9]+P11C1B1[9]+P13C1B1[9]+P15C1B1[9]+P17C1B1[9]+P19C1B1[9])/10
+Average_ID_for_C2B1=(P1C2B1[9]+P3C2B1[9]+P5C2B1[9]+P7C2B1[9]+P9C2B1[9]+P11C2B1[9]+P13C2B1[9]+P15C2B1[9]+P17C2B1[9]+P19C2B1[9])/10
+Average_ID_for_C1B2=(P2C1B2[9]+P4C1B2[9]+P6C1B2[9]+P8C1B2[9]+P10C1B2[9]+P12C1B2[9]+P14C1B2[9]+P16C1B2[9]+P18C1B2[9]+P20C1B2[9])/10
+Average_ID_for_C2B2=(P2C2B2[9]+P4C2B2[9]+P6C2B2[9]+P8C2B2[9]+P10C2B2[9]+P12C2B2[9]+P14C2B2[9]+P16C2B2[9]+P18C2B2[9]+P20C2B2[9])/10
+
+Average_Error_for_C1B1=(P1C1B1[16]+P3C1B1[16]+P5C1B1[16]+P7C1B1[16]+P9C1B1[16]+P11C1B1[16]+P13C1B1[16]+P15C1B1[16]+P17C1B1[16]+P19C1B1[16])/10
+Average_Error_for_C2B1=(P1C2B1[16]+P3C2B1[16]+P5C2B1[16]+P7C2B1[16]+P9C2B1[16]+P11C2B1[16]+P13C2B1[16]+P15C2B1[16]+P17C2B1[16]+P19C2B1[16])/10
+Average_Error_for_C1B2=(P2C1B2[16]+P4C1B2[16]+P6C1B2[16]+P8C1B2[16]+P10C1B2[16]+P12C1B2[16]+P14C1B2[16]+P16C1B2[16]+P18C1B2[16]+P20C1B2[16])/10
+Average_Error_for_C2B2=(P2C2B2[16]+P4C2B2[16]+P6C2B2[16]+P8C2B2[16]+P10C2B2[16]+P12C2B2[16]+P14C2B2[16]+P16C2B2[16]+P18C2B2[16]+P20C2B2[16])/10
+
+Average_MT_for_C1B1=(P1C1B1[15]+P3C1B1[15]+P5C1B1[15]+P7C1B1[15]+P9C1B1[15]+P11C1B1[15]+P13C1B1[15]+P15C1B1[15]+P17C1B1[15]+P19C1B1[15])/10
+Average_MT_for_C2B1=(P1C2B1[15]+P3C2B1[15]+P5C2B1[15]+P7C2B1[15]+P9C2B1[15]+P11C2B1[15]+P13C2B1[15]+P15C2B1[15]+P17C2B1[15]+P19C2B1[15])/10
+Average_MT_for_C1B2=(P2C1B2[15]+P4C1B2[15]+P6C1B2[15]+P8C1B2[15]+P10C1B2[15]+P12C1B2[15]+P14C1B2[15]+P16C1B2[15]+P18C1B2[15]+P20C1B2[15])/10
+Average_MT_for_C2B2=(P2C2B2[15]+P4C2B2[15]+P6C2B2[15]+P8C2B2[15]+P10C2B2[15]+P12C2B2[15]+P14C2B2[15]+P16C2B2[15]+P18C2B2[15]+P20C2B2[15])/10
+
+Average_TP_for_C1B1=(P1C1B1[17]+P3C1B1[17]+P5C1B1[17]+P7C1B1[17]+P9C1B1[17]+P11C1B1[17]+P13C1B1[17]+P15C1B1[17]+P17C1B1[17]+P19C1B1[17])/10
+Average_TP_for_C2B1=(P1C2B1[17]+P3C2B1[17]+P5C2B1[17]+P7C2B1[17]+P9C2B1[17]+P11C2B1[17]+P13C2B1[17]+P15C2B1[17]+P17C2B1[17]+P19C2B1[17])/10
+Average_TP_for_C1B2=(P2C1B2[17]+P4C1B2[17]+P6C1B2[17]+P8C1B2[17]+P10C1B2[17]+P12C1B2[17]+P14C1B2[17]+P16C1B2[17]+P18C1B2[17]+P20C1B2[17])/10
+Average_TP_for_C2B2=(P2C2B2[17]+P4C2B2[17]+P6C2B2[17]+P8C2B2[17]+P10C2B2[17]+P12C2B2[17]+P14C2B2[17]+P16C2B2[17]+P18C2B2[17]+P20C2B2[17])/10
+
+TP_T_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
+TP_T_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_TP_C1B1^2+sd_TP_C1B2^2)^0.5*(40)^0.5
+ER_T_value_between_C1B1_and_C2B1=-(mean_TP_C1B1-mean_TP_C2B1)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
+ER_T_value_between_C1B2_and_C2B2=-(mean_TP_C1B2-mean_TP_C2B2)/(sd_ER_C1B1^2+sd_ER_C1B2^2)^0.5*(40)^0.5
+
+
+#Create an r object to contrain the linear regresion data
+LR_C1B1.r=lm(MT_C1B1b~ID_C1B1b)
+LR_C1B2.r=lm(MT_C1B2b~ID_C1B2b)
+LR_C2B1.r=lm(MT_C2B1b~ID_C2B1b)
+LR_C2B2.r=lm(MT_C2B2b~ID_C2B2b)
+LR_C1.r=lm(MT_C1~ID_C1)
+LR_C2.r=lm(MT_C2~ID_C2)
+
+#Output Data
+par(mfrow=c(2,2))
+plot(MT_C1B1b,ID_C1B1b,col="blue",main="Mean time to difficulty in C1B1", ylab="Mean Error", xlab="ID")
+plot(MT_C1B2b,ID_C1B2b,col="blue",main="Mean time to difficulty in C1B2",ylab="Mean Error", xlab="ID")
+plot(MT_C2B1b,ID_C2B1b,col="blue",main="Mean time to difficulty in C2B1",ylab="Mean Error", xlab="ID")
+plot(MT_C2B2b,ID_C2B2b, col="blue",main="Mean time to difficulty in C2B2",ylab="Mean Error", xlab="ID")
+summary(LR_C1B1.r)
+summary(LR_C1B2.r)
+summary(LR_C2B1.r)
+summary(LR_C2B2.r)
+summary(LR_C1.r)
+summary(LR_C2.r)
+Average_Error_for_C1B1
+sd_ER_C1B1
+Average_Error_for_C1B2
+sd_ER_C1B2
+Average_Error_for_C2B1
+sd_ER_C2B1
+Average_Error_for_C2B2
+sd_ER_C2B2
+
+Average_MT_for_C1B1
+sd_MT_C1B1
+Average_MT_for_C1B2
+sd_MT_C1B2
+Average_MT_for_C2B1
+sd_MT_C2B1
+Average_MT_for_C2B2
+sd_MT_C2B2
+
+Average_ID_for_C1B1
+sd_ID_C1B1
+Average_ID_for_C1B2
+sd_ID_C1B2
+Average_ID_for_C2B1
+sd_ID_C2B1
+Average_ID_for_C2B2
+
+Average_TP_for_C1B1
+sd_ID_C1B1
+Average_TP_for_C1B2
+sd_ID_C1B2
+Average_TP_for_C2B1
+sd_ID_C2B1
+Average_TP_for_C2B2
+
+sd_ID_C2B2
+sd_ER
+sd_ID
+
+mean_ID_C1B1
+mean_ID_C1B2
+mean_ID_C2B1
+mean_ID_C2B2
+
+mean_MT_C1B1
+mean_MT_C1B2
+mean_MT_C2B1
+mean_MT_C2B2
+
+mean_ER_C1B1
+mean_ER_C1B2
+mean_ER_C2B1
+mean_ER_C2B2
+
+mean_TP_C1B1
+mean_TP_C1B2
+mean_TP_C2B1
+mean_TP_C2B2
+
+TP_T_value_between_C1B1_and_C2B1
+TP_T_value_between_C1B2_and_C2B2
+ER_T_value_between_C1B1_and_C2B1
+ER_T_value_between_C1B2_and_C2B2
